@@ -1,6 +1,64 @@
 # Cybersecurity Portfolio - Ahmad Fany Rizqiyanto
 
-This repository contains hands-on technical reports and practical documentation from my cybersecurity assessments.
+This repository contains hands-on technical reports, security assessments, and practical documentation developed through cybersecurity labs, bootcamp projects, and self-learning activities.
 
-### 🔴 Red Team
-* [Injection Attacks Report (PDF)](./Red%20Team/Injection%20Attacks%20Report.pdf) — Vulnerability analysis of SQL Injection & Reflected XSS within the DVWA laboratory environment.
+## 🔴 Red Team
+
+### 1. Injection Attacks Report
+
+Assessment conducted within the Damn Vulnerable Web Application (DVWA) laboratory environment.
+
+Topics covered:
+
+* SQL Injection
+* Reflected Cross-Site Scripting (XSS)
+* Vulnerability Validation
+* Risk Analysis
+
+📄 [Injection Attacks Report](./Red%20Team/Injection%20Attacks%20Report.pdf)
+
+---
+
+### 2. Web Application Penetration Testing Assessment
+
+Grey-Box Web Application Penetration Testing conducted against an e-commerce platform.
+
+Activities performed:
+
+* Reconnaissance
+* Application Mapping
+* Vulnerability Discovery
+* Exploitation Validation
+* Risk Assessment
+* Security Reporting
+
+Key Findings:
+
+* SQL Injection
+* Business Logic Vulnerability
+* Credential Exposure
+* Exposed Git Repository
+
+Artifacts:
+
+📄 [Web Application Penetration Testing Report](./Red%20Team/Web%20Application%20Penetration%20Testing%20Report%20-%20Redacted.pdf)
+
+🖼️ [Attack Chain Diagram](./Red%20Team/Attack%20Chain%20-%20Web%20App%20Pentest.png)
+
+---
+
+## 🔵 Blue Team
+
+Projects will be added during the Blue Team phase, including:
+
+* SIEM Investigation
+* Threat Hunting
+* Incident Response
+* Malware Analysis
+* Security Monitoring
+
+---
+
+## Disclaimer
+
+All projects were conducted within authorized educational environments, laboratory platforms, or have been appropriately redacted to remove sensitive information.
