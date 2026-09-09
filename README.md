@@ -2,6 +2,14 @@
 
 This repository contains hands-on technical reports, security assessments, and practical documentation developed through cybersecurity labs, bootcamp projects, and self-learning activities.
 
+## 🏆 Bootcamp Achievement
+
+- 🥇 Best Final Project Defensive
+- 🥈 1st Runner-Up Performer
+- 🎯 Final Score: 93.76/100
+- 🔵 Final Project Defensive: 100/100
+- 🔴 Final Project Offensive: 78.33/100
+
 ## 🔴 Red Team
 
 ### 1. Injection Attacks Report
@@ -51,11 +59,10 @@ Artifacts:
 
 Projects will be added during the Blue Team phase, including:
 
-* SIEM Investigation
-* Threat Hunting
+* Wazuh SIEM Investigation & Threat Detection
 * Incident Response
-* Malware Analysis
-* Security Monitoring
+* Server & Networ Seurity
+* Malware Analysis & IOC
 
 ---
 
