@@ -81,10 +81,26 @@ Key Findings:
 Artifacts:
 📄 [Digital Forensics Investigation Report (Wazuh Lab)](./Blue%20Team/Wazuh%20SIEM%20Investigation%20%26%20Threat%20Hunting.pdf)
 
----
-* Incident Response
-* Server & Networ Security
-* Malware Analysis & IOC
+### 2. Network Security, Malware Analysis & IOC Identification
+
+A detailed technical investigation and malware behavior analysis conducted within an isolated virtual lab environment. The project evaluates both static signatures and dynamic runtime behaviors of MSFVenom payloads (raw vs. `x86/shikata_ga_nai` polymorphic encoder) using VirusTotal, PE metadata analysis, string extraction, and the Tria.ge Automated Cloud Sandbox.
+
+Activities performed:
+* Isolated Lab Environment Setup (VirtualBox/VMware Host-Only Adapter isolation)
+* Payload Generation & C2 Infrastructure Setup (MSFVenom executable generation & Metasploit multi-handler listener)
+* Static Analysis & Signature Evasion Assessment (Hash calculation, VirusTotal engine comparison, PE Metadata, Entropy & Strings Analysis)
+* Dynamic Sandbox Analysis (Behavioral inspection & memory unpacking via Tria.ge Sandbox)
+* Indicators of Compromise (IOC) Extraction (Hashes, C2 IP/Port, Behavioral patterns, File System artifacts)
+* Threat Hunting Rule Development (Custom YARA rule creation for unsigned MSFVenom Meterpreter detection)
+* Incident Response Playbook Development (NIST SP 800-61 aligned containment, eradication, and recovery strategies)
+
+Key Findings:
+* **Static Evasion Limitations:** While 5 iterations of `x86/shikata_ga_nai` encoding completely mutated the file hashes (SHA-256), VirusTotal detection remained high (48/71 vs. 54/70 raw) because modern AV/EDR engines identify the decoder stub patterns.
+* **Dynamic Analysis Superiority:** Tria.ge Sandbox achieved 10/10 Malicious Score for both payloads by observing in-memory unpacking and extracting exact C2 configuration (`192.168.75.128:4444`).
+* **Signature vs. Behavioral Consistency:** Polymorphism alters Hash IOCs, but Network IOCs (`192.168.75.128:4444`) and Behavioral IOCs (in-memory execution & API hooking) remain constant and detectable.
+
+Artifacts:
+📄 [Malware Analysis & IOC Report](./Blue%20Team/Malware%20Analysis%20%26%20IOC%20Report.pdf)
 
 ---
 
