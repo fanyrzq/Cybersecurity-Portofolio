@@ -10,6 +10,8 @@ This repository contains hands-on technical reports, security assessments, and p
 - 🔵 Final Project Defensive: 100/100
 - 🔴 Final Project Offensive: 78.33/100
 
+---
+
 ## 🔴 Red Team
 
 ### 1. Injection Attacks Report
@@ -57,8 +59,6 @@ Artifacts:
 
 ## 🔵 Blue Team
 
-Projects will be added during the Blue Team phase, including:
-
 ### 1. Digital Forensics & Wazuh SIEM Threat Investigation
 
 Comprehensive digital forensics investigation and threat hunting analysis on a production-like e-commerce server (`srv974671`). The assessment correlates multiple digital artifacts—including Wazuh SIEM alerts, SSH authentication logs, MySQL query logs, Apache web logs, and application source code—to identify security incidents, misconfigurations, and web application vulnerabilities.
@@ -80,6 +80,8 @@ Key Findings:
 
 Artifacts:
 📄 [Digital Forensics Investigation Report (Wazuh Lab)](./Blue%20Team/Wazuh%20SIEM%20Investigation%20%26%20Threat%20Hunting.pdf)
+
+---
 
 ### 2. Network Security, Malware Analysis & IOC Identification
 
