@@ -25,35 +25,35 @@ Topics covered:
 * Vulnerability Validation
 * Risk Analysis
 
+Artifacts:
+
 📄 [Injection Attacks Report](./Red%20Team/Injection%20Attacks%20Report.pdf)
 
 ---
 
 ### 2. Web Application Penetration Testing Assessment
 
-Grey-Box Web Application Penetration Testing conducted against an e-commerce platform.
+Grey-box penetration testing on an e-commerce platform (`BimbyCart`) based on OWASP WSTG.
 
 Activities performed:
 
-* Reconnaissance
-* Application Mapping
-* Vulnerability Discovery
-* Exploitation Validation
-* Risk Assessment
-* Security Reporting
+* Reconnaissance & Attack Surface Mapping
+* Web Vulnerability Exploitation & Validation
+* Business Logic Flaw Analysis
+* Source Code & Credential Audit
+* Risk Assessment & Remediation Reporting
 
 Key Findings:
 
-* SQL Injection
-* Business Logic Vulnerability
-* Credential Exposure
-* Exposed Git Repository
+* Error-Based SQL Injection
+* Business Logic Price & Quantity Tampering
+* Exposed `.git` Repository & Hardcoded Credentials
+* Stored Cross-Site Scripting (XSS)
+* Session Management & Anti-CSRF Flaws
 
 Artifacts:
 
-📄 [Web Application Penetration Testing Report](./Red%20Team/Web%20Application%20Penetration%20Testing%20Report%20-%20Redacted.pdf)
-
-🖼️ [Attack Chain Diagram](./Red%20Team/Attack%20Chain%20-%20Web%20App%20Pentest.png)
+📄 [Web Application Penetration Testing Report](./Red%20Team/Final%20Project%20Offensive%20Security.pdf)
 
 ---
 
@@ -83,10 +83,10 @@ Technical malware analysis and runtime behavior inspection of MSFVenom payloads 
 
 Activities performed:
 
-* Static Analysis & Signature Evasion Assessment (VirusTotal, PE Metadata, Strings)
-* Dynamic Sandbox Analysis & Memory Unpacking (Tria.ge Sandbox)
-* Indicators of Compromise (IOC) Extraction (Hash, Network, Behavioral)
-* Threat Hunting Rule Development (Custom YARA Rule)
+* Static Analysis & Signature Evasion Assessment
+* Dynamic Sandbox Analysis & Memory Unpacking
+* Indicators of Compromise (IOC) Extraction
+* Threat Hunting Rule Development (YARA)
 * Incident Response Playbook Development (NIST SP 800-61)
 
 Artifacts:
