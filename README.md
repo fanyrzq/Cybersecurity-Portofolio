@@ -59,9 +59,31 @@ Artifacts:
 
 Projects will be added during the Blue Team phase, including:
 
-* Wazuh SIEM Investigation & Threat Detection
+### 1. Digital Forensics & Wazuh SIEM Threat Investigation
+
+Comprehensive digital forensics investigation and threat hunting analysis on a production-like e-commerce server (`srv974671`). The assessment correlates multiple digital artifacts—including Wazuh SIEM alerts, SSH authentication logs, MySQL query logs, Apache web logs, and application source code—to identify security incidents, misconfigurations, and web application vulnerabilities.
+
+Activities performed:
+* SIEM Alert Correlation & Log Analysis (Wazuh Rules: 5503, 5551, 5710, 5712, 5760)
+* Multi-Source Evidence Mapping (SSH Auth Log, Apache Access/Error Log, MySQL Query Log)
+* Incident Timeline Reconstruction & Attack Vector Identification
+* Source Code Security Audit (PHP Input Validation & Upload Handler Analysis)
+* Risk Rating Assessment (CVSS v3.1 Scoring)
+* Incident Response & Mitigation Roadmap (Immediate to Long-Term Hardening)
+
+Key Findings:
+* **F-01 (Server Misconfiguration):** Insecure OpenSSH Configuration (`PermitRootLogin yes`, `PasswordAuthentication yes`)
+* **F-02 (Application Vulnerability):** Local File Inclusion (LFI) via `my_orders` parameter in `my_account.php`
+* **F-03 (Active Attack):** Time-Based Blind SQL Injection on `coupon_code` parameter (662 automated queries)
+* **F-04 (Active Attack):** Webshell Execution & Outbound Connection Attempt in `/customer_images/` (`exploit.php`, `bing.php`)
+* **F-05 (Active Attack):** Distributed SSH Brute Force Attack (473 failed attempts across 15+ IPs)
+
+Artifacts:
+📄 [Digital Forensics Investigation Report (Wazuh Lab)](./Blue%20Team/Wazuh%20SIEM%20Investigation%20%26%20Threat%20Hunting.pdf)
+
+---
 * Incident Response
-* Server & Networ Seurity
+* Server & Networ Security
 * Malware Analysis & IOC
 
 ---
