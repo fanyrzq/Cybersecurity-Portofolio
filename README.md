@@ -61,47 +61,36 @@ Artifacts:
 
 ### 1. Digital Forensics & Wazuh SIEM Threat Investigation
 
-Comprehensive digital forensics investigation and threat hunting analysis on a production-like e-commerce server (`srv974671`). The assessment correlates multiple digital artifacts—including Wazuh SIEM alerts, SSH authentication logs, MySQL query logs, Apache web logs, and application source code—to identify security incidents, misconfigurations, and web application vulnerabilities.
+Digital forensics investigation and threat hunting conducted on an e-commerce server (`srv974671`) by correlating SIEM alerts, multi-source system logs, and application source code.
 
 Activities performed:
-* SIEM Alert Correlation & Log Analysis (Wazuh Rules: 5503, 5551, 5710, 5712, 5760)
-* Multi-Source Evidence Mapping (SSH Auth Log, Apache Access/Error Log, MySQL Query Log)
-* Incident Timeline Reconstruction & Attack Vector Identification
-* Source Code Security Audit (PHP Input Validation & Upload Handler Analysis)
-* Risk Rating Assessment (CVSS v3.1 Scoring)
-* Incident Response & Mitigation Roadmap (Immediate to Long-Term Hardening)
 
-Key Findings:
-* **F-01 (Server Misconfiguration):** Insecure OpenSSH Configuration (`PermitRootLogin yes`, `PasswordAuthentication yes`)
-* **F-02 (Application Vulnerability):** Local File Inclusion (LFI) via `my_orders` parameter in `my_account.php`
-* **F-03 (Active Attack):** Time-Based Blind SQL Injection on `coupon_code` parameter (662 automated queries)
-* **F-04 (Active Attack):** Webshell Execution & Outbound Connection Attempt in `/customer_images/` (`exploit.php`, `bing.php`)
-* **F-05 (Active Attack):** Distributed SSH Brute Force Attack (473 failed attempts across 15+ IPs)
+* SIEM Alert Correlation & Log Analysis (Wazuh, SSH, Apache, MySQL)
+* Incident Timeline Reconstruction & Evidence Mapping
+* Threat Vector Identification (LFI, SQLi, Webshell, SSH Brute Force)
+* Source Code Security Audit
+* Risk Assessment & Incident Response Roadmap
 
 Artifacts:
-📄 [Digital Forensics Investigation Report (Wazuh Lab)](./Blue%20Team/Wazuh%20SIEM%20Investigation%20%26%20Threat%20Hunting.pdf)
+
+📄 [Digital Forensics Investigation Report](./Blue%20Team/Wazuh%20SIEM%20Investigation%20%26%20Threat%20Hunting.pdf)
 
 ---
 
 ### 2. Network Security, Malware Analysis & IOC Identification
 
-A detailed technical investigation and malware behavior analysis conducted within an isolated virtual lab environment. The project evaluates both static signatures and dynamic runtime behaviors of MSFVenom payloads (raw vs. `x86/shikata_ga_nai` polymorphic encoder) using VirusTotal, PE metadata analysis, string extraction, and the Tria.ge Automated Cloud Sandbox.
+Technical malware analysis and runtime behavior inspection of MSFVenom payloads conducted within an isolated virtual laboratory environment.
 
 Activities performed:
-* Isolated Lab Environment Setup (VirtualBox/VMware Host-Only Adapter isolation)
-* Payload Generation & C2 Infrastructure Setup (MSFVenom executable generation & Metasploit multi-handler listener)
-* Static Analysis & Signature Evasion Assessment (Hash calculation, VirusTotal engine comparison, PE Metadata, Entropy & Strings Analysis)
-* Dynamic Sandbox Analysis (Behavioral inspection & memory unpacking via Tria.ge Sandbox)
-* Indicators of Compromise (IOC) Extraction (Hashes, C2 IP/Port, Behavioral patterns, File System artifacts)
-* Threat Hunting Rule Development (Custom YARA rule creation for unsigned MSFVenom Meterpreter detection)
-* Incident Response Playbook Development (NIST SP 800-61 aligned containment, eradication, and recovery strategies)
 
-Key Findings:
-* **Static Evasion Limitations:** While 5 iterations of `x86/shikata_ga_nai` encoding completely mutated the file hashes (SHA-256), VirusTotal detection remained high (48/71 vs. 54/70 raw) because modern AV/EDR engines identify the decoder stub patterns.
-* **Dynamic Analysis Superiority:** Tria.ge Sandbox achieved 10/10 Malicious Score for both payloads by observing in-memory unpacking and extracting exact C2 configuration (`192.168.75.128:4444`).
-* **Signature vs. Behavioral Consistency:** Polymorphism alters Hash IOCs, but Network IOCs (`192.168.75.128:4444`) and Behavioral IOCs (in-memory execution & API hooking) remain constant and detectable.
+* Static Analysis & Signature Evasion Assessment (VirusTotal, PE Metadata, Strings)
+* Dynamic Sandbox Analysis & Memory Unpacking (Tria.ge Sandbox)
+* Indicators of Compromise (IOC) Extraction (Hash, Network, Behavioral)
+* Threat Hunting Rule Development (Custom YARA Rule)
+* Incident Response Playbook Development (NIST SP 800-61)
 
 Artifacts:
+
 📄 [Malware Analysis & IOC Report](./Blue%20Team/Malware%20Analysis%20%26%20IOC%20Report.pdf)
 
 ---
